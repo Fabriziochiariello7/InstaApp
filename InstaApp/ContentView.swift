@@ -33,7 +33,6 @@ struct TabBar: View {
                 HomeView()
                     .tabItem{
                         Image(selected == 0 ? "Home" : "Home2")
-                        
                     }
                     .tag(0)
                     
@@ -44,23 +43,20 @@ struct TabBar: View {
                     }
                     .tag(1)
                 
-                Image("Reels")
+                NotAvailableView(namepage: "Reels ")
                     .tabItem{
-                        Image("Reels")
-                    }
+                        Image(selected == 2 ? "Reels2" : "Reels")
+                    }.tag(2)
                 
-                Image("Shop")
+                NotAvailableView(namepage: "Shop ")
                     .tabItem{
-                        Image("Shop")
-                    }
+                        Image(selected == 3 ? "Shop2" : "Shop")
+                    }.tag(3)
                 
-                Image("Profile")
-                    .resizable()
-                    .frame(width: 21, height: 21)
-                    .cornerRadius(50)
+                NotAvailableView( namepage: "Profile ")
                     .tabItem{
-                        Image("TabBarPhoto")
-                    }
+                        Image(selected == 4 ? "TabBarPhoto4" : "TabBarPhoto5")
+                    }.tag(4)
                 
                 
             }

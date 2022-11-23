@@ -11,6 +11,7 @@ struct Header: View {
     var body: some View {
         HStack{
             Image("Logo")
+                
             Spacer()
             HStack(spacing: 20.0){
                 Image("add")
@@ -19,7 +20,7 @@ struct Header: View {
             }
         }
         .padding(.horizontal, 15)
-        .padding(.vertical, 3)
+        .padding(.vertical, 10)
     }
 }
 

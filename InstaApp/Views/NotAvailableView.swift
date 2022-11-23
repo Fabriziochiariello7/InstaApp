@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct NotAvailableView: View {
+  //  @Environment(\.presentationMode) var presentation
+    var namepage : String
     var body: some View {
         VStack {
-            Header()
+            
+          /*  Button {
+                presentation.wrappedValue.dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(.black)
+                    .scaleEffect(1.3)
+            }.padding(.trailing, 350)
+                .padding(.vertical, 5) */
             Spacer()
-            Text("This page is not available right now, sorry!!")
-                        .fontWeight(.bold)
+            Text("\(namepage)is not available right now, sorry!!")
+            .fontWeight(.bold)
+            Image("Logo")
             Spacer()
         }
         
@@ -22,6 +33,6 @@ struct NotAvailableView: View {
 
 struct NotAvailableView_Previews: PreviewProvider {
     static var previews: some View {
-        NotAvailableView()
+        NotAvailableView( namepage: "")
     }
 }

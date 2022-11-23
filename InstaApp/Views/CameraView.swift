@@ -12,8 +12,6 @@ struct CameraView: View {
     var body: some View {
         VStack{
             
-            
-            
             HStack{
                 Button {
                     presentation.wrappedValue.dismiss()
