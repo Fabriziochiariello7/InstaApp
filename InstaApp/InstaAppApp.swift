@@ -12,6 +12,7 @@ struct InstaAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }

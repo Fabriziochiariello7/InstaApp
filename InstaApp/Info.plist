@@ -3,9 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>UIAppFonts</key>
-	<array>
-		<string>SegoeUIBold.ttf</string>
-		<string>SegoeUI.ttf</string>
-	</array>
+	<array/>
 </dict>
 </plist>

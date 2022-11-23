@@ -30,7 +30,7 @@ struct SearchInput: View {
                 .background(Color(UIColor.secondarySystemBackground))
                 .cornerRadius(10)
                 
-                NavigationLink(destination: CameraView(), label: {Image("Camera1")
+                NavigationLink(destination: CameraView(classifier: ImageClassifier()), label: {Image("Camera1")
                     .scaledToFit() })
                 
                         
