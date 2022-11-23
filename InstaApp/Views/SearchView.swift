@@ -14,9 +14,8 @@ struct SearchView: View {
         NavigationStack{
             VStack(spacing: 10.0) {
                 
-                SearchInput(text: text)
+                SearchInput(text: "")
                 
-        
                 Labels()
                 
                 ScrollView(.vertical, showsIndicators: false){

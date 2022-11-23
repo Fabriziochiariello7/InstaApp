@@ -527,7 +527,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaApp/Info.plist;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Quest app usa questa libreri per questo motivo";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Do you want to allow 'InstaApp' to use the Media Library?";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Do you want to allow 'InstaApp' to use the Camera?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -559,7 +559,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = InstaApp/Info.plist;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Quest app usa questa libreri per questo motivo";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Do you want to allow 'InstaApp' to use the Media Library?";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Do you want to allow 'InstaApp' to use the Camera?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

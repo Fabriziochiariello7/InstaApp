@@ -4,87 +4,96 @@ struct CameraView: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    
+    @State var isNavigationViewActive=false
+    @State var label = ""
     @ObservedObject var classifier: ImageClassifier
     
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
-        VStack{
-            
-            HStack{
-                Button {
-                    presentation.wrappedValue.dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.black)
-                        .scaleEffect(1.3)
-                }.padding(.leading, 1)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-           
-            HStack{
-                Image(systemName: "photo")
-                    .onTapGesture {
-                        isPresenting = true
-                        sourceType = .photoLibrary
-                    }
-                
-                Image(systemName: "camera")
-                    .onTapGesture {
-                        isPresenting = true
-                        sourceType = .camera
-                    }
-            }
-            .font(.title)
-            .foregroundColor(.primary)
-            
-            Rectangle()
-                .strokeBorder()
-                .foregroundColor(.primary)
-                .overlay(
-                    Group {
-                        if uiImage != nil {
-                            Image(uiImage: uiImage!)
-                                .resizable()
-                                .scaledToFit()
-                        }
-                    }
-                )
-            
-            
+        NavigationView(){
             VStack{
-                Button(action: {
-                    if uiImage != nil {
-                        classifier.detect(uiImage: uiImage!)
-                    }
-                }) {
-                    Image(systemName: "bolt.fill")
-                        .foregroundColor(.yellow)
-                        .font(.title)
+                NavigationLink(destination: ReturnView(),isActive: $isNavigationViewActive, label: {})
+                HStack{
+                    Button {
+                        presentation.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.black)
+                            .scaleEffect(2)
+                    }.padding(.leading, 1)
+                    Spacer()
+                    Image("Logo")
+                    Spacer()
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
+                HStack{
+                    Image(systemName: "photo")
+                        .onTapGesture {
+                            isPresenting = true
+                            sourceType = .photoLibrary
+                        }
+                    
+                    Image(systemName: "camera")
+                        .onTapGesture {
+                            isPresenting = true
+                            sourceType = .camera
+                        }
+                }
+                .font(.title)
+                .foregroundColor(.primary)
+                
+                Rectangle()
+                    .strokeBorder()
+                    .foregroundColor(.primary)
+                    .overlay(
+                        Group {
+                            if uiImage != nil {
+                                Image(uiImage: uiImage!)
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                        }
+                    )
                 
                 
-                Group {
-                    if let imageClass = classifier.imageClass {
-                        HStack{
-                            Text("Image categories:")
-                                .font(.caption)
-                            Text(imageClass)
-                                .bold()
-                            
-
+                VStack{
+                    Button(action: {
+                        if uiImage != nil {
+                            classifier.detect(uiImage: uiImage!)
                         }
-                    } else {
-                        HStack{
-                            Text("Image categories: N/A")
-                                .font(.caption)
-                        }
+                    }) {
+                        Image(systemName: "bolt.fill")
+                            .foregroundColor(.yellow)
+                            .font(.title)
                     }
-                   
+                    
+                    
+                    Group {
+                        if let imageClass = classifier.imageClass {
+                            HStack{
+                                Text("Image categories:")
+                                    .font(.caption)
+                                Text(imageClass)
+                                    .bold()
+                                
+                                
+                            }.onAppear(){
+                                label = imageClass
+                            }
+                        } else {
+                            HStack{
+                                Text("Image categories: N/A")
+                                    .font(.caption)
+                            }
+                        }
+                        
+                    }
+                    .font(.subheadline)
+                    .padding()
+                    
                 }
-                .font(.subheadline)
-                .padding()
                 
             }
         }
@@ -99,6 +108,16 @@ struct CameraView: View {
                 .ignoresSafeArea()
             
         }
+        .onChange(of: label, perform: {_ in
+            if uiImage != nil{
+                    if label == "pot, flowerpot"{
+                        isNavigationViewActive = true
+                    
+                    
+                }
+            }
+            
+        })
         
         
         

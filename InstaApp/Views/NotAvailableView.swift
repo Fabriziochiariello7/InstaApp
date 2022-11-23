@@ -13,14 +13,6 @@ struct NotAvailableView: View {
     var body: some View {
         VStack {
             
-          /*  Button {
-                presentation.wrappedValue.dismiss()
-            } label: {
-                Image(systemName: "chevron.left")
-                    .foregroundColor(.black)
-                    .scaleEffect(1.3)
-            }.padding(.trailing, 350)
-                .padding(.vertical, 5) */
             Spacer()
             Text("\(namepage)is not available right now, sorry!!")
             .fontWeight(.bold)

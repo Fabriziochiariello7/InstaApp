@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ReturnGrid: View {  var images: [String] = ["Plant1", "Plant2", "Plant3", "Plant4", "Plant5", "Plant6", "Plant7", "Plant8", "Plant9", "Plant10", "Plant11"]
+struct ReturnGrid: View {
+    var images: [String] = ["Plant1", "Plant2", "Plant3", "Plant4", "Plant5", "Plant6", "Plant7", "Plant8", "Plant9", "Plant10", "Plant11"]
     
     var columnGrid: [GridItem] = [GridItem(.flexible(), spacing: 1), GridItem(.flexible(), spacing: 1), GridItem(.flexible(), spacing: 1)]
     

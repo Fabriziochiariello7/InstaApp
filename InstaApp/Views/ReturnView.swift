@@ -9,16 +9,7 @@ import SwiftUI
 
 struct ReturnView: View {
     var body: some View {
-      /*  init() {
-            let appearance = UINavigationBarAppearance()
-            appearance.backButtonAppearance.normal.titlePositionAdjustment =
-                UIOffset(horizontal: 40, vertical: 0)
-
-            UINavigationBar.appearance().standardAppearance = appearance
-        }
-       
-       }*/
-       
+      
        
         VStack(spacing: 10.0) {
             ReturnHeader()
@@ -34,7 +25,7 @@ struct ReturnView: View {
                 ReturnGrid()
             }
             
-        }
+        }.navigationBarBackButtonHidden(true)
     }
     
 }

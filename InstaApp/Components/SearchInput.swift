@@ -12,18 +12,14 @@ struct SearchInput: View {
     @State var nextPage: Bool = false
     
     var body: some View {
-        
-        
+        NavigationStack{
             HStack {
                 
-                    
-              
                 HStack {
                     Image(systemName: "magnifyingglass")
                         .foregroundColor(.secondary)
                     
                     TextField("Search", text: $text)
-                   
                     
                 }
                 .frame(width: 300)
@@ -34,22 +30,10 @@ struct SearchInput: View {
                 NavigationLink(destination: CameraView(classifier: ImageClassifier()), label: {Image("Camera1")
                     .scaledToFit() })
                 
-                
-                        
-                    
-                }
-               
-                
-               
-                
-                    
-                
-            
-                
-                
-                
             }
             
+        }
+    }
 }
 
 struct SearchInput_Previews: PreviewProvider {
