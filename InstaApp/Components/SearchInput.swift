@@ -23,6 +23,7 @@ struct SearchInput: View {
                         .foregroundColor(.secondary)
                     
                     TextField("Search", text: $text)
+                   
                     
                 }
                 .frame(width: 300)
@@ -32,6 +33,7 @@ struct SearchInput: View {
                 
                 NavigationLink(destination: CameraView(classifier: ImageClassifier()), label: {Image("Camera1")
                     .scaledToFit() })
+                
                 
                         
                     

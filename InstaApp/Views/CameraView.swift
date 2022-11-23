@@ -7,8 +7,24 @@ struct CameraView: View {
     
     @ObservedObject var classifier: ImageClassifier
     
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
         VStack{
+            
+            
+            
+            HStack{
+                Button {
+                    presentation.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(.black)
+                        .scaleEffect(1.3)
+                }.padding(.leading, 1)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+           
             HStack{
                 Image(systemName: "photo")
                     .onTapGesture {
@@ -23,11 +39,11 @@ struct CameraView: View {
                     }
             }
             .font(.title)
-            .foregroundColor(.blue)
+            .foregroundColor(.primary)
             
             Rectangle()
                 .strokeBorder()
-                .foregroundColor(.yellow)
+                .foregroundColor(.primary)
                 .overlay(
                     Group {
                         if uiImage != nil {
@@ -46,7 +62,7 @@ struct CameraView: View {
                     }
                 }) {
                     Image(systemName: "bolt.fill")
-                        .foregroundColor(.orange)
+                        .foregroundColor(.yellow)
                         .font(.title)
                 }
                 
@@ -58,20 +74,23 @@ struct CameraView: View {
                                 .font(.caption)
                             Text(imageClass)
                                 .bold()
+                            
+
                         }
                     } else {
                         HStack{
-                            Text("Image categories: NA")
+                            Text("Image categories: N/A")
                                 .font(.caption)
                         }
                     }
+                   
                 }
                 .font(.subheadline)
                 .padding()
                 
             }
         }
-        
+        .navigationBarBackButtonHidden(true)
         .fullScreenCover(isPresented: $isPresenting){
             ImagePicker(uiImage: $uiImage, isPresenting:  $isPresenting, sourceType: $sourceType)
                 .onDisappear{
@@ -79,8 +98,10 @@ struct CameraView: View {
                         classifier.detect(uiImage: uiImage!)
                     }
                 }
+                .ignoresSafeArea()
             
         }
+        
         
         
         

@@ -15,8 +15,7 @@ struct SearchView: View {
             VStack(spacing: 10.0) {
                 
                 SearchInput(text: text)
-                
-                
+        
                 Labels()
                 
                 ScrollView(.vertical, showsIndicators: false){

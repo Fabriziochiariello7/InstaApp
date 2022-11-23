@@ -22,23 +22,29 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct TabBar: View {
+    
+    @State var selected = 0
     var body: some View {
         
         VStack(spacing: 0.0){
             Divider()
             
-            TabView{
+            TabView(selection: $selected){
                 HomeView()
                     .tabItem{
-                        Image("Home")
+                        Image(selected == 0 ? "Home" : "Home2")
+                        
                     }
+                    .tag(0)
+                    
                 
                 SearchView(text: "")
                     .tabItem{
-                        Image("Search")
+                        Image(selected == 1 ? "Search2" : "Search")
                     }
+                    .tag(1)
                 
-                ReturnView()
+                Image("Reels")
                     .tabItem{
                         Image("Reels")
                     }
@@ -61,5 +67,6 @@ struct TabBar: View {
             
             
         }
+        
     }
 }
