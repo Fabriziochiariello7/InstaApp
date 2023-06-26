@@ -16,7 +16,7 @@ struct Story: View {
     
     var image: String = "Profile"
     var name: String = "FChiariello"
-   
+    
     var body: some View {
         VStack {
             VStack{
@@ -36,7 +36,7 @@ struct Story: View {
             Text(name)
                 .font(.caption)
                 .fontWeight(.regular)
-                
+            
         }
     }
 }

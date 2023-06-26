@@ -14,16 +14,16 @@ struct HomeView: View {
             
             ScrollView(.vertical, showsIndicators: false){
                 
-                           Stories()
-                           
-                           Divider()
-                           
-                           Post()
-                           
-                           Post(image: "CarPhoto" , description: "This car is really cool!")
-                           
+                Stories()
+                
+                Divider()
+                
+                Post()
+                
+                Post(image: "CarPhoto" , description: "This car is really cool!")
+                
             }
-        
+            
         }
     }
 }

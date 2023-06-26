@@ -23,8 +23,8 @@ struct Grid: View {
                 
             }
             
-             
-          
+            
+            
         }
     }
 }

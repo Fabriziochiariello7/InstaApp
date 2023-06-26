@@ -10,14 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabBar()
-       
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            
+        
     }
 }
 
@@ -27,7 +27,6 @@ struct TabBar: View {
     var body: some View {
         
         VStack(spacing: 0.0){
-            Divider()
             
             TabView(selection: $selected){
                 HomeView()
@@ -35,7 +34,7 @@ struct TabBar: View {
                         Image(selected == 0 ? "Home" : "Home2")
                     }
                     .tag(0)
-                    
+                
                 
                 SearchView(text: "")
                     .tabItem{

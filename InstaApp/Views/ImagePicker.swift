@@ -26,7 +26,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     typealias UIViewControllerType = UIImagePickerController
-        
+    
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -36,7 +36,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: ImagePicker
-                
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             parent.uiImage = info[.originalImage] as? UIImage
             parent.isPresenting = false

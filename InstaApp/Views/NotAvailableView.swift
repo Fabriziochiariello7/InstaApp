@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct NotAvailableView: View {
-  //  @Environment(\.presentationMode) var presentation
+    //  @Environment(\.presentationMode) var presentation
     var namepage : String
     var body: some View {
         VStack {
             
             Spacer()
             Text("\(namepage)is not available right now, sorry!!")
-            .fontWeight(.bold)
+                .fontWeight(.bold)
             Image("Logo")
             Spacer()
         }

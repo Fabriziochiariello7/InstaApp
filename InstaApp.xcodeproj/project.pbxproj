@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693CA9D72A49BF8100D21E68 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 693CA9D62A49BF8100D21E68 /* Resnet50.mlmodel */; };
 		694C61DC292BBA1C006B0505 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694C61DB292BBA1C006B0505 /* CameraView.swift */; };
 		694C61E3292C211F006B0505 /* ReturnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694C61E2292C211F006B0505 /* ReturnView.swift */; };
 		694C61E5292C2F07006B0505 /* ReturnHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694C61E4292C2F07006B0505 /* ReturnHeader.swift */; };
@@ -35,7 +36,6 @@
 		69BCB037292E11DB00280EC4 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BCB036292E11DB00280EC4 /* ImageClassifier.swift */; };
 		69BCB039292E120100280EC4 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BCB038292E120100280EC4 /* Classifier.swift */; };
 		69BCB03B292E1BE000280EC4 /* NotAvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BCB03A292E1BE000280EC4 /* NotAvailableView.swift */; };
-		69C7D629292D1EAD00AE8A1A /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 69C7D628292D1EAD00AE8A1A /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		693CA9D62A49BF8100D21E68 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		694C61DB292BBA1C006B0505 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		694C61DF292BDDCB006B0505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		694C61E2292C211F006B0505 /* ReturnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnView.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		69BCB036292E11DB00280EC4 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		69BCB038292E120100280EC4 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		69BCB03A292E1BE000280EC4 /* NotAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAvailableView.swift; sourceTree = "<group>"; };
-		69C7D628292D1EAD00AE8A1A /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +206,7 @@
 				69BCB034292E119D00280EC4 /* ImagePicker.swift */,
 				69BCB036292E11DB00280EC4 /* ImageClassifier.swift */,
 				69BCB038292E120100280EC4 /* Classifier.swift */,
-				69C7D628292D1EAD00AE8A1A /* Resnet50.mlmodel */,
+				693CA9D62A49BF8100D21E68 /* Resnet50.mlmodel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,8 +351,8 @@
 				694C61E3292C211F006B0505 /* ReturnView.swift in Sources */,
 				6959EB6D2927143C00A8E5C0 /* Grid.swift in Sources */,
 				6959EB6B2927128E00A8E5C0 /* Labels.swift in Sources */,
+				693CA9D72A49BF8100D21E68 /* Resnet50.mlmodel in Sources */,
 				6959EB5C2927083B00A8E5C0 /* PostContent.swift in Sources */,
-				69C7D629292D1EAD00AE8A1A /* Resnet50.mlmodel in Sources */,
 				69BCB037292E11DB00280EC4 /* ImageClassifier.swift in Sources */,
 				6959EB5E2927085800A8E5C0 /* Post.swift in Sources */,
 				6959EB5A2927079900A8E5C0 /* PostHeader.swift in Sources */,

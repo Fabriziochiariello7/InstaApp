@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Label: View {
     var text: String = "Design"
-
+    
     var body: some View {
         
         Text(text)
@@ -18,8 +18,8 @@ struct Label: View {
             .padding(.horizontal, 24)
             .padding(.vertical, 10)
             .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(.secondary, lineWidth: 1)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.secondary, lineWidth: 1)
             )
     }
 }

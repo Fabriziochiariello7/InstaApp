@@ -4,7 +4,7 @@ struct CameraView: View {
     @State var isPresenting: Bool = false
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    @State var isNavigationViewActive=false
+    @State var isNavigationViewActive = false
     @State var label = ""
     @ObservedObject var classifier: ImageClassifier
     
@@ -13,7 +13,7 @@ struct CameraView: View {
     var body: some View {
         NavigationView(){
             VStack{
-                NavigationLink(destination: ReturnView(),isActive: $isNavigationViewActive, label: {})
+                NavigationLink(destination: ReturnView(), isActive: $isNavigationViewActive, label: {})
                 HStack{
                     Button {
                         presentation.wrappedValue.dismiss()
@@ -56,7 +56,6 @@ struct CameraView: View {
                             }
                         }
                     )
-                
                 
                 VStack{
                     Button(action: {
@@ -110,19 +109,14 @@ struct CameraView: View {
         }
         .onChange(of: label, perform: {_ in
             if uiImage != nil{
-                    if label == "pot, flowerpot"{
-                        isNavigationViewActive = true
+                if label == "pot, flowerpot"{
+                    isNavigationViewActive = true
                     
                     
                 }
             }
             
         })
-        
-        
-        
-        
-        
         
         
         .padding()

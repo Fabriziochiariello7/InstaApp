@@ -32,7 +32,7 @@ struct ReturnPostHeader: View {
                         .foregroundColor(.secondary)
                 }
                 HStack{
-                   
+                    
                     Button(action:{
                         if buttonText == "Follow"{
                             buttonText = "Following"
@@ -53,12 +53,8 @@ struct ReturnPostHeader: View {
                             .padding(.horizontal, 40.0)
                             .background(buttonColor.opacity(0.8))
                             .cornerRadius(10)
-                            
-                            
                         
                     })
-                    
-                    
                     
                 }
                 HStack{
