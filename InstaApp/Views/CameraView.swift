@@ -11,22 +11,33 @@ struct CameraView: View {
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
-        NavigationView(){
+        NavigationView {
             VStack{
-                NavigationLink(destination: ReturnView(), isActive: $isNavigationViewActive, label: {})
+                NavigationLink(destination: ReturnView(), isActive: $isNavigationViewActive, label: {
+                    EmptyView()
+                })
+//                NavigationLink(destination:{
+//
+//                    if isNavigationViewActive == true {
+//                        ReturnView()
+//                    }}, label: {
+//
+//                })
                 HStack{
                     Button {
                         presentation.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
                             .foregroundColor(.black)
-                            .scaleEffect(2)
-                    }.padding(.leading, 1)
+                            .scaleEffect(1)
+                    }
+                    .padding(.leading, 0.0)
                     Spacer()
                     Image("Logo")
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+                
                 
                 HStack{
                     Image(systemName: "photo")
@@ -87,13 +98,10 @@ struct CameraView: View {
                                     .font(.caption)
                             }
                         }
-                        
                     }
                     .font(.subheadline)
                     .padding()
-                    
                 }
-                
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -110,14 +118,11 @@ struct CameraView: View {
         .onChange(of: label, perform: {_ in
             if uiImage != nil{
                 if label == "pot, flowerpot"{
-                    isNavigationViewActive = true
-                    
+                    isNavigationViewActive = true                    
                     
                 }
             }
-            
         })
-        
         
         .padding()
     }
