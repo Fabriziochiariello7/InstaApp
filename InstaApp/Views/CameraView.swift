@@ -16,13 +16,6 @@ struct CameraView: View {
                 NavigationLink(destination: ReturnView(), isActive: $isNavigationViewActive, label: {
                     EmptyView()
                 })
-//                NavigationLink(destination:{
-//
-//                    if isNavigationViewActive == true {
-//                        ReturnView()
-//                    }}, label: {
-//
-//                })
                 HStack{
                     Button {
                         presentation.wrappedValue.dismiss()
