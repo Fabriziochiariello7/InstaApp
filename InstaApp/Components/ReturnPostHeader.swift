@@ -59,7 +59,7 @@ struct ReturnPostHeader: View {
                 }
                 HStack{
                     
-                    Text("See a few top posts each week")
+                    Text("See a few top posts each week!")
                         .font(.caption)
                         .fontWeight(.regular)
                         .foregroundColor(.secondary)

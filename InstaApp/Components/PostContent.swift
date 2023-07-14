@@ -27,7 +27,7 @@ struct PostContent: View {
                 
                 Image("bookmark")
             }
-            .padding(.horizontal, 12)
+            .padding(.horizontal)
             .padding(.vertical, 9)
         }
     }

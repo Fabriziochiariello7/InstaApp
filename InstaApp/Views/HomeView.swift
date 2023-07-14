@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack(spacing: 0.0){
+        VStack{
             Header()
             
             ScrollView(.vertical, showsIndicators: false){
@@ -20,7 +20,7 @@ struct HomeView: View {
                 
                 Post()
                 
-                Post(image: "CarPhoto" , description: "This car is really cool!")
+                Post(image: "CarPhoto" , description: "This car is looking really cool!   ")
                 
             }
             

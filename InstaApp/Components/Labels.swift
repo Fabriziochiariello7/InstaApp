@@ -20,7 +20,7 @@ struct Labels: View {
                 Label(text: "Dogs")
             }
             .padding(.horizontal, 16)
-            .frame(width: .infinity, height: 38)
+            .frame( height: UIScreen.main.bounds.height / 16)
         }
     }
 }

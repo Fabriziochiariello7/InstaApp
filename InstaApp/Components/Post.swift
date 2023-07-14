@@ -20,13 +20,13 @@ struct Post: View {
             Text("Liked by Steph and others")
                 .font(.footnote)
                 .fontWeight(.bold)
-                .frame(width: .infinity)
-                .padding(.horizontal, 12)
+                .frame(width: UIScreen.main.bounds.width / 2 - 20)
+                .padding(.horizontal)
             
             Text(description)
                 .font(.footnote)
-                .frame(width: .infinity)
-                .padding(.horizontal, 12)
+                .frame(width: UIScreen.main.bounds.width / 2 )
+                .padding(.horizontal)
             
             HStack{
                 HStack(spacing: 7.0){
